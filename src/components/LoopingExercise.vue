@@ -14,7 +14,11 @@
             Then use the index to print the players place in the collection.
           </p>
           <!-- add the v-for to player-card -->
-          <div class="player-card text-center" v-for="player in state.players">
+          <div
+            class="player-card text-center"
+            v-for="player in state.players"
+            :key="player.position"
+          >
             <h5>{{ player.name }}</h5>
             <div>
               <img class="img" :src="player.photo" />
